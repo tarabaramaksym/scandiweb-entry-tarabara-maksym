@@ -1,0 +1,135 @@
+.shopping-cart-product {
+  display: flex;
+  border-top: 1px solid #E5E5E5;
+  padding-top: 20px;
+}
+
+.shopping-cart-product:last-child {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.count-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.count-buttons p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.btn-count {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+
+}
+
+.shopping-cart-product .product-info {
+  width: 75% !important;
+}
+
+.shopping-cart-product .product-label {
+  margin-top: 8px;
+
+}
+
+.shopping-cart-product .product-container .product-price {
+  margin-bottom: 6px;
+}
+
+.shopping-cart-product .image-container .product-image {
+  width: 100%;
+  max-height: 18rem;
+  margin-right: 0px;
+}
+
+.shopping-cart-product .image-container {
+  width: 35%;
+  float: right;
+  margin-left: 16px;
+}
+
+.mini-shopping-cart .product-container .product-label {
+  margin-top: 8px;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Raleway';
+}
+
+.mini-shopping-cart .product-container .product-brand {
+  font-weight: 300;
+}
+
+.mini-shopping-cart .product-container .product-price-container>.product-label {
+  display: none;
+}
+
+.mini-shopping-cart .product-container .product-price-container .product-price {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.mini-shopping-cart .product-container .product-brand,
+.mini-shopping-cart .product-container .product-name {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.mini-shopping-cart .btn-attribute {
+  min-width: 24px;
+  min-height: 24px;
+  font-size: 14px;
+  padding: 1px;
+}
+
+.mini-shopping-cart .attribute-swatch-border {
+  width: 18px;
+  height: 18px;
+}
+
+.mini-shopping-cart .btn-attribute-swatch {
+  width: 16px;
+  height: 16px;
+}
+
+.mini-shopping-cart .count-buttons p {
+  font-size: 14px;
+}
+
+.mini-shopping-cart .count-buttons .btn-count {
+  width: 24px;
+  height: 24px;
+}
+
+.mini-shopping-cart .count-buttons .btn-count img {
+  width: 24px;
+  height: 24px;
+}
+
+.mini-shopping-cart .product-container .product-info {
+  width: 50% !important;
+}
+
+.mini-shopping-cart .product-container .product-image {
+  width: 6.5rem;
+  height: auto;
+}
+
+
+.mini-shopping-cart .shopping-cart-product {
+  border: none !important;
+}
+
+.shopping-cart-product:last-child {
+  border-bottom: 1px solid #E5E5E5;
+}

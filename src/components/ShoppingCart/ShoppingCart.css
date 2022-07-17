@@ -1,0 +1,90 @@
+.shopping-cart .cart-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.shopping-cart .total-table {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  border-spacing: 6px;
+}
+
+.shopping-cart .total-table td:last-child {
+  font-weight: 700;
+}
+
+.shopping-cart .total-table tr:last-child td:first-child {
+  font-weight: 500;
+}
+
+.shopping-cart .bottom-space {
+  height: 2rem;
+}
+
+
+.mini-shopping-cart {
+  width: 20rem;
+  max-height: 44rem;
+  position: absolute;
+  margin-left: -18.5rem;
+  margin-top: 1.0rem;
+  background-color: #ffffff;
+  z-index: 1;
+  padding: 32px 16px;
+}
+
+.mini-shopping-cart .cart-title {
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.mini-shopping-cart .total-table {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.mini-shopping-cart .total-table tr {
+  display: none;
+}
+
+.mini-shopping-cart .total-table tr:last-child {
+  display: table-row;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+.mini-shopping-cart .total-table tr td:last-child {
+  text-align: right;
+}
+
+
+.mini-shopping-cart .shopping-cart-products {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 30rem;
+}
+
+.mini-shopping-cart .shopping-cart-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.mini-shopping-cart .btn-primary,
+.mini-shopping-cart .btn-secondary {
+  min-width: auto;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 0px;
+  font-family: 'Raleway';
+}
+
+.mini-shopping-cart .btn-secondary {
+  width: 50%;
+
+}
+
+.mini-shopping-cart .btn-primary {}

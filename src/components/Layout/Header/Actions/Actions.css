@@ -1,0 +1,83 @@
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+
+.actions {
+  margin: 28.5px 50px 0px 0px;
+  display: flex;
+}
+
+.currency-selector-caret-down,
+.currency-selector-caret-up {
+  margin: 13px 15px 0px 10px
+}
+
+.currency-selector-caret-down {
+  transform: rotate(180deg);
+  font-stretch: extra-condensed;
+}
+
+.currency-selector-symbol {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 4px;
+  font-family: 'Raleway';
+  width: 80px;
+  text-align: right;
+}
+
+.currencies-list {
+  position: absolute;
+  list-style: none;
+  box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+  z-index: 15;
+  background-color: #ffffff;
+  border-spacing: 0px;
+  margin-left: 65px;
+  margin-top: 8px;
+  ;
+}
+
+.currencies-list td {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.8px;
+  margin: 0;
+  border: none;
+
+}
+
+.currencies-list td:first-child {
+  padding: 8px 4px 8px 10px;
+}
+
+.currencies-list td:last-child {
+  padding-right: 40px;
+}
+
+.currencies-list tr {
+  border-spacing: 0;
+}
+
+.currencies-list tr:hover {
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+
+.quantity {
+  border-radius: 50%;
+  background-color: #1D1F22;
+  color: white;
+  font-size: 14px;
+  font-family: 'Roboto';
+  display: flex;
+  justify-content: center;
+
+  padding: 3px 8px;
+  position: absolute;
+  z-index: -1;
+  margin-left: 12px;
+  margin-top: -5px;
+}

@@ -1,38 +1,99 @@
-.App {
+body {
+  background-color: #ffffff;
+  font-family: 'Raleway';
+
+}
+
+html {
+  overflow-y: scroll;
+}
+
+ul,
+div,
+nav,
+p,
+h4,
+h5,
+h6,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #1D1F22;
+  padding: 17px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase;
+  min-width: 275px;
+  cursor: pointer;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.btn-secondary:hover,
+.btn-attribute:hover,
+.btn-count:hover {
+  background-color: #E9E9E9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.selected-attribute:hover {
+  background-color: #1D1F22 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn-secondary:active,
+.btn-count:active {
+  background-color: #ffffff;
+}
+
+.btn-count {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #5ECE7B;
   color: white;
+  border: 1px solid #5ECE7B;
+  box-sizing: border-box;
+  padding: 17px;
+  font-size: 16px;
+  text-transform: uppercase;
+  min-width: 275px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary:hover {
+  background-color: #56B56F;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary:active {
+  background-color: #5ECE7B;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5ECE7B;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #5ECE7B;
 }

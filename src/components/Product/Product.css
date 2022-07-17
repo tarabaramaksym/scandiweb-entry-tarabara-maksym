@@ -1,0 +1,139 @@
+.product-container {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.carousel-images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+  height: 32rem;
+  overflow-x: hidden;
+  margin-right: 45px;
+  padding-right: 4px;
+  width: 6.5rem;
+}
+
+
+.carousel-images img {
+  float: left;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+}
+
+.product-container .product-info {
+  display: flex;
+  flex-direction: column;
+  width: 18.5rem;
+
+}
+
+.product-container .product-image {
+  width: 39rem;
+  height: 32rem;
+  float: left;
+  object-fit: cover;
+  margin-right: 75px;
+}
+
+.product-container .product-brand,
+.product-container .product-name {
+  font-size: 30px;
+  line-height: 27px;
+  margin: 0 0 16px 0;
+}
+
+.product-container .product-brand {
+  font-weight: 600;
+}
+
+.product-container .product-name {
+  font-weight: 400;
+}
+
+.uppercase-title {
+  text-transform: uppercase;
+}
+
+.product-container .product-label {
+  font-family: 'Roboto Condensed';
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.product-container .product-price {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 24px;
+}
+
+
+.product-container .product-description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  margin-top: 42px;
+}
+
+
+
+.attribute-items {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-attribute,
+.btn-attribute-swatch {
+  background-color: transparent;
+
+}
+
+.btn-attribute {
+  border: 1px solid #1D1F22;
+  font-family: 'Source Sans Pro';
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0 13px 0;
+  min-height: 45px;
+  min-width: 63px;
+}
+
+.btn-attribute-swatch {
+  border: none;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+}
+
+.btn-attribute:hover,
+.btn-attribute-swatch:hover {
+  cursor: pointer;
+}
+
+
+.selected-attribute:hover,
+.selected-attribute-swatch>.btn-attribute-swatch {
+  cursor: default !important;
+}
+
+.selected-attribute-swatch {
+  border: 1px solid #5ECE7B;
+  margin: -1px -1px -1px 0;
+}
+
+.attribute-swatch-border {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+}
+
+.selected-attribute {
+  background-color: #1D1F22;
+  color: #ffffff;
+}

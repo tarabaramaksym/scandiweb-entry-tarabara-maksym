@@ -1,0 +1,52 @@
+.image-slider,
+.selected-image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.arrow-buttons {
+
+  display: flex;
+  gap: 8px;
+  align-self: flex-end;
+  position: absolute;
+  margin-bottom: 20px;
+  margin-right: 16px;
+}
+
+.arrow-buttons button {
+  background: rgba(0, 0, 0, 0.73);
+  border: none;
+  padding: 2.7px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.arrow-buttons button:hover {
+  background: rgba(45, 45, 45, 0.73);
+}
+
+.arrow-buttons button:active {
+  background: rgba(0, 0, 0, 0.73);
+}
+
+.arrow-buttons button img {
+  width: 18px;
+  height: 18px;
+
+}
+
+.arrow-buttons button:first-child img {
+  transform: rotate(270deg);
+}
+
+.arrow-buttons button:last-child img {
+  transform: rotate(90deg);
+}
