@@ -4,8 +4,10 @@ import { ADD, DECREMENT_COUNT, INCREMENT_COUNT, SET_SELECTED_ATTRIBUTE, SET_SELE
 const initState = {
   shoppingCart: [],
   selectedCurrency: 0,
-  isShoppingCartOpen: false
+  isShoppingCartOpen: false,
+  routes: []
 }
+
 
 // might be a good idea, to make two different reducers, for working with the shopping cart and currency,
 // but I left it as it is

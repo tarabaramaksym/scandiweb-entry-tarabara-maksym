@@ -43,7 +43,7 @@ class ShoppingCartProduct extends Component {
             <h6 className="product-label uppercase-title">Price:</h6>
             <p className="product-price">{currencySymbol}{price}</p>
           </div>
-          <ProductAttributes product={product} selectedAttributes={product.selectedAttributes}
+          <ProductAttributes static={this.props.mini} product={product} selectedAttributes={product.selectedAttributes}
             attributeClickHandler={(attributeIndex, attributeValueIndex) => { this.props.setSelectedAttribute(this.props.index, attributeIndex, attributeValueIndex) }} />
 
         </div>

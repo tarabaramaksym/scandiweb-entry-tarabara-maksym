@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <header>
         <div className="page-container">
-          <Navigation />
+          <Navigation routes={this.props.routes} />
           <img src={brandIcon} alt="Brand icon" className="brand-icon"></img>
           <Actions node={this.props.node} />
         </div>

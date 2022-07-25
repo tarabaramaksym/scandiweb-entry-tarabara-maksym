@@ -1,12 +1,12 @@
 import { Component } from "react";
 import { connect } from "react-redux"
 import { Link } from "react-router-dom";
-
 import { withRouter } from "../../../navigation/withRouter";
-import { addToShoppingCart } from "../../../redux/actions";
-
 import './ProductCard.css';
 import cartIcon from '../../../icons/empty-cart-icon-white.svg';
+import { addToShoppingCart } from "../../../redux/actions";
+
+
 
 class ProductCard extends Component {
 
@@ -37,18 +37,16 @@ class ProductCard extends Component {
   }
 
   clickHandler() {
-    if (this.props.product.inStock) {
-      this.props.navigate(this.props.product.id);
-    }
+    this.props.navigate(this.props.product.id);
   }
 
   shoppingCartClickHandler(event) {
     event.preventDefault();
+
     this.props.addToShoppingCart({ ...this.props.product, selectedAttributes: this.props.product.attributes.map(a => (0)) })
   }
 
   render() {
-
     // variables to increase readabiliy 
     const product = this.props.product;
     const currencySymbol = product.prices[this.props.selectedCurrency].currency.symbol;
@@ -63,7 +61,7 @@ class ProductCard extends Component {
         {
           this.state.showCart ?
             <div className="shopping-cart-container">
-              <button onClick={this.shoppingCartClickHandler} className="btn-icon"><img src={cartIcon}></img></button>
+              <button onClick={this.shoppingCartClickHandler} className="btn-icon"><img src={cartIcon} alt="Shopping cart icon"></img></button>
             </div>
             : null
         }

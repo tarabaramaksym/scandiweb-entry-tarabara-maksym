@@ -27,6 +27,10 @@ a {
   text-transform: inherit;
 }
 
+.flex {
+  display: flex;
+}
+
 .btn-secondary {
   background-color: #ffffff;
   color: black;
@@ -78,6 +82,16 @@ a {
 
 .btn-primary:active {
   background-color: #5ECE7B;
+}
+
+.btn-primary:disabled {
+  background-color: #1D1F22;
+  border: 1px solid #1D1F22;
+  cursor: default;
+}
+
+.btn-mini {
+  width: 50%;
 }
 
 

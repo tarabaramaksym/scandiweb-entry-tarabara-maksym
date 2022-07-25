@@ -37,7 +37,7 @@ class ShoppingCart extends Component {
 
     let totalCost = 0, quantity = 0;
     const symbol = this.props.shoppingCart[0].prices[this.props.selectedCurrency].currency.symbol;
-    this.props.shoppingCart.map(p => {
+    this.props.shoppingCart.forEach(p => {
       totalCost += p.prices[this.props.selectedCurrency].amount * p.count;
       quantity += p.count;
     })
@@ -73,7 +73,7 @@ class ShoppingCart extends Component {
 
       <div className="shopping-cart-buttons">
         {this.props.mini ? <button className="btn-secondary" to="/cart" onClick={this.viewBagClickHandler}>View Bag</button> : null}
-        <button className="btn-primary" style={this.props.mini ? { width: '50%' } : null}>Checkout</button>
+        <button className={`btn-primary ${this.props.mini ? 'btn-mini' : ''}`}>Checkout</button>
       </div>
 
 

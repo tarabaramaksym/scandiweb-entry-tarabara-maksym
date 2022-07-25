@@ -31,7 +31,7 @@
 }
 
 .shopping-cart-product .product-info {
-  width: 75% !important;
+  width: 83.5% !important;
 }
 
 .shopping-cart-product .product-label {
@@ -45,12 +45,13 @@
 
 .shopping-cart-product .image-container .product-image {
   width: 100%;
-  max-height: 18rem;
   margin-right: 0px;
+  object-fit: contain;
+
 }
 
 .shopping-cart-product .image-container {
-  width: 35%;
+  width: 17.5%;
   float: right;
   margin-left: 16px;
 }
@@ -90,6 +91,17 @@
   min-height: 24px;
   font-size: 14px;
   padding: 1px;
+  cursor: default !important;
+}
+
+.static-attributes .btn-attribute,
+.static-attributes .btn-attribute-swatch {
+  cursor: default !important;
+}
+
+.mini-shopping-cart .btn-attribute:hover,
+.static-attributes .btn-attribute:hover {
+  background-color: transparent;
 }
 
 .mini-shopping-cart .attribute-swatch-border {
@@ -100,6 +112,7 @@
 .mini-shopping-cart .btn-attribute-swatch {
   width: 16px;
   height: 16px;
+  cursor: default !important;
 }
 
 .mini-shopping-cart .count-buttons p {
@@ -120,9 +133,8 @@
   width: 50% !important;
 }
 
-.mini-shopping-cart .product-container .product-image {
-  width: 6.5rem;
-  height: auto;
+.mini-shopping-cart .image-container {
+  width: 36.5%;
 }
 
 

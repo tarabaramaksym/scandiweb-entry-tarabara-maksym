@@ -2,10 +2,11 @@ import { Component } from "react";
 import { withRouter } from "../../navigation/withRouter";
 import { connect } from "react-redux"
 import { fetchProduct } from "../../services/products-service";
-
 import './Product.css';
 import { addToShoppingCart } from "../../redux/actions";
 import ProductAttributes from "./ProductAttributes/ProductAttributes";
+import HTMLParser from "../Helpers/HTMLParser/HTMLParser";
+
 
 class Product extends Component {
 
@@ -38,9 +39,10 @@ class Product extends Component {
     return (
       <div className="carousel-images custom-scrollbar">
         {this.state.product.gallery.map((img, index) => {
-          if (index != this.state.selectedImage) {
-            return <img key={index} onClick={() => { this.setState({ ...this.state, selectedImage: index }) }} src={img} alt={`${this.state.product.name} image #${index + 1}`}></img>
+          if (index !== this.state.selectedImage) {
+            return <img key={index} onClick={() => { this.setState({ ...this.state, selectedImage: index }) }} src={img} alt={`${this.state.product.name} #${index + 1}`}></img>
           }
+          return null;
         })}
       </div>
     )
@@ -52,24 +54,33 @@ class Product extends Component {
       const product = this.state.product;
       const currencySymbol = product.prices[this.props.selectedCurrency].currency.symbol;
       const price = product.prices[this.props.selectedCurrency].amount;
+      const isAttributesStatic = !product.inStock;
+
       return (
         <div className="product-container">
           {this.renderCarousel()}
 
-          <img className="product-image" src={product.gallery[this.state.selectedImage]}></img>
+          <img className="product-image" src={product.gallery[this.state.selectedImage]} alt={`${product.name} ${product.brand}`}></img>
 
           <div className="product-info">
             <h5 className="product-brand">{product.brand}</h5>
             <h5 className="product-name">{product.name}</h5>
 
-            <ProductAttributes product={product} selectedAttributes={this.state.selectedAttributes} attributeClickHandler={this.attributeClickHandler} />
+            <ProductAttributes static={isAttributesStatic} product={product} selectedAttributes={this.state.selectedAttributes} attributeClickHandler={this.attributeClickHandler} />
 
             <div className="product-price-container">
               <h6 className="product-label uppercase-title">Price:</h6>
               <p className="product-price">{currencySymbol}{price}</p>
             </div>
-            <button onClick={() => { this.props.addToShoppingCart({ ...product, selectedAttributes: [...this.state.selectedAttributes] }) }} className="btn-primary ">Add to cart</button>
-            <p className="product-description" dangerouslySetInnerHTML={{ __html: product.description }}></p>
+
+            <button
+              onClick={() => { this.props.addToShoppingCart({ ...product, selectedAttributes: [...this.state.selectedAttributes] }) }}
+              className="btn-primary"
+              disabled={!product.inStock}>
+              {product.inStock ? 'Add to cart' : 'Product is out of stock'}
+            </button>
+
+            <HTMLParser className="product-description" htmlString={product.description}></HTMLParser>
           </div>
         </div>
       )

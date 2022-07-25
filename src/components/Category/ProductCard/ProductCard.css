@@ -3,13 +3,14 @@
   flex-direction: column;
   padding: 1rem;
   margin-bottom: 2rem;
+  width: 386px;
+  box-sizing: border-box;
 }
 
 .product-card .product-image {
   float: left;
-  width: 22rem;
   height: 20.5rem;
-  object-fit: cover;
+
 }
 
 .product-card:hover {

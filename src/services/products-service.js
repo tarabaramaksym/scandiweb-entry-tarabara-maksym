@@ -6,7 +6,7 @@ client.setEndpoint(endPoint);
 export const fetchCategories = async () => {
   const query = new Query('categories').addField('name');
   const result = await client.post(query);
-  return result;
+  return result.categories;
 }
 
 // returns all fields for Product, function is needed as we use it in a couple of places

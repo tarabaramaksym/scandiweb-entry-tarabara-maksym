@@ -11,7 +11,7 @@ class Layout extends Component {
       <div>
 
         {this.props.isShoppingCartOpen ? <div className="grayed" /> : null}
-        <Header />
+        <Header routes={this.props.routes} />
 
         <div className="page-container">
           <div className={`container `}>

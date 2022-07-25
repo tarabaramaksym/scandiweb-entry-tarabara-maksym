@@ -2,8 +2,8 @@ import { ADD, DECREMENT_COUNT, INCREMENT_COUNT, SET_SELECTED_ATTRIBUTE, SET_SELE
 
 const compareArrays = (arr1, arr2) => {
   let equal = true;
-  arr1.map((element, index) => {
-    if (equal && element != arr2[index]) {
+  arr1.forEach((element, index) => {
+    if (equal && element !== arr2[index]) {
       equal = false;
     }
   });
@@ -78,12 +78,12 @@ export const setSelectedAttribute = (productIndex, attributeIndex, attributeValu
 
   let shoppingCart = [...getState().shoppingCart];
   // create new attributes
-  let newAttributes = shoppingCart[productIndex].selectedAttributes.map((a, i) => (i == attributeIndex ? attributeValueIndex : a));
+  let newAttributes = shoppingCart[productIndex].selectedAttributes.map((a, i) => (i === attributeIndex ? attributeValueIndex : a));
   let elementsConcatted = false;
 
   shoppingCart.forEach((p, index) => {
     // check if there is already exists element with the same attributes and name
-    if (!elementsConcatted && shoppingCart[productIndex].name === p.name && index != productIndex) {
+    if (!elementsConcatted && shoppingCart[productIndex].name === p.name && index !== productIndex) {
       if (compareArrays(newAttributes, p.selectedAttributes)) {
         let buf = shoppingCart[productIndex].count;
 
