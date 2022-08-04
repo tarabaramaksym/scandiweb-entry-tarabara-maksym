@@ -43,18 +43,18 @@ class ShoppingCartProduct extends Component {
             <h6 className="product-label uppercase-title">Price:</h6>
             <p className="product-price">{currencySymbol}{price}</p>
           </div>
-          <ProductAttributes static={this.props.mini} product={product} selectedAttributes={product.selectedAttributes}
+          <ProductAttributes static={true} product={product} selectedAttributes={product.selectedAttributes}
             attributeClickHandler={(attributeIndex, attributeValueIndex) => { this.props.setSelectedAttribute(this.props.index, attributeIndex, attributeValueIndex) }} />
 
         </div>
 
         <div className="count-buttons">
-          <button className="btn-count" onClick={() => { this.props.incrementCount(this.props.index) }}><img src={plusSign}></img></button>
+          <button className="btn-count" onClick={() => { this.props.incrementCount(this.props.index) }}><img src={plusSign} alt='Plus sign'></img></button>
           <p>{product.count}</p>
-          <button className="btn-count" onClick={() => { this.props.decrementCount(this.props.index) }}><img src={minusSign}></img></button>
+          <button className="btn-count" onClick={() => { this.props.decrementCount(this.props.index) }}><img src={minusSign} alt='Minus sign'></img></button>
         </div>
         <div className="image-container">
-          <ImageSlider className="product-image" images={this.props.mini ? [product.gallery[0]] : product.gallery} />
+          <ImageSlider className="product-image" alt={product.name} images={this.props.mini ? [product.gallery[0]] : product.gallery} />
         </div>
       </div>
     )

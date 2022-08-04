@@ -13,6 +13,7 @@
   margin-right: 45px;
   padding-right: 4px;
   width: 6.5rem;
+  height: 32rem;
 }
 
 
@@ -30,12 +31,18 @@
 
 }
 
-.product-container .product-image {
+
+.product-container .product-image-container {
   width: 39rem;
-  height: 100%;
-  float: left;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+
+
+.product-container .product-image {
+  height: 32rem;
   margin-right: 75px;
+
 }
 
 .product-container .product-brand,

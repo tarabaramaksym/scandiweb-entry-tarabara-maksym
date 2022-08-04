@@ -6,7 +6,7 @@ import { fetchCategories } from "../services/products-service";
 
 // routes are used in the app.js for the regular react-router-dom stuff
 // and in the Layout/Header/Navigation to generate Navigation navbar
-// render boolean is needed to let the Navigation component know if it should render an element
+// render boolean is required to let the Navigation component know if it should render the route
 
 
 const baseRoutes = [

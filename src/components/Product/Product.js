@@ -60,7 +60,10 @@ class Product extends Component {
         <div className="product-container">
           {this.renderCarousel()}
 
-          <img className="product-image" src={product.gallery[this.state.selectedImage]} alt={`${product.name} ${product.brand}`}></img>
+          <div className="product-image-container" >
+            <img className="product-image" src={product.gallery[this.state.selectedImage]} alt={`${product.name} ${product.brand}`}></img>
+          </div>
+
 
           <div className="product-info">
             <h5 className="product-brand">{product.brand}</h5>

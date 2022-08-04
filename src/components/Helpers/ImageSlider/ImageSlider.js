@@ -26,12 +26,12 @@ class ImageSlider extends Component {
   render() {
     return (
       <div className="image-slider">
-        <img className={this.props.className} src={this.props.images[this.state.selectedImage]}></img>
+        <img className={this.props.className} src={this.props.images[this.state.selectedImage]} alt={this.props.alt}></img>
         {
           this.props.images.length > 1 ?
             <div className="arrow-buttons">
-              <button onClick={this.prevImage}><img src={arrowIcon}></img></button>
-              <button onClick={this.nextImage}><img src={arrowIcon}></img></button>
+              <button onClick={this.prevImage}><img src={arrowIcon} alt='Left arrow'></img></button>
+              <button onClick={this.nextImage}><img src={arrowIcon} alt='Right arrow'></img></button>
             </div>
             : null
         }

@@ -37,7 +37,6 @@ class ShoppingCartModal extends Component {
         <img className="shopping-cart-icon" src={cartIcon} alt="Empty cart icon"></img>
       </div>
     );
-
     return (
       <div>
         <Modal button={shoppingModalBtn} show={this.props.isShoppingCartOpen} toggle={this.toggleShoppingCartModal}>

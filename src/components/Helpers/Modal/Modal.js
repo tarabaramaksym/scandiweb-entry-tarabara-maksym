@@ -16,7 +16,7 @@ class Modal extends Component {
   handleOutsideClick = e => {
     let parent = e.target.parentElement
     if (!this.node.contains(e.target) && this.props.show
-      && (parent.parentElement && !parent.className.indexOf("btn-count") === -1)) {
+      && (parent.parentElement && parent.className.indexOf("btn-count") === -1)) {
       this.handleClick();
     }
   };
