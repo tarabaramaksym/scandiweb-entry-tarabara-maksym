@@ -54,7 +54,7 @@ class CurrenciesModal extends Component {
     const currencyModalBtn = (
       <div className="flex">
         <p className="currency-selector-symbol">{this.state.currencies !== null ? this.state.currencies[this.props.selectedCurrency].symbol : ''}</p>
-        <img src={caretIcon} className={this.state.showCurrencyModal ? "currency-selector-caret-up" : "currency-selector-caret-down"}></img>
+        <img src={caretIcon} className={this.state.showCurrencyModal ? "currency-selector-caret-up" : "currency-selector-caret-down"} alt="Shopping cart"></img>
       </div>
     )
 

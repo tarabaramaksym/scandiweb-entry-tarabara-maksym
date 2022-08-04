@@ -1,4 +1,3 @@
-import { client, Query } from "@tilework/opus";
 import { Component } from "react";
 import { fetchProducts } from "../../services/products-service";
 
